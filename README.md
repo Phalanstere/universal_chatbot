@@ -22,6 +22,8 @@ var bot = new UniversalBot();
 
 Usuallay, you you would pass some parameters, al list of **aiml-type** files, a **strategy** and so forth.
 
+## aiml files
+
 ```
 var params = {};
 
@@ -31,6 +33,62 @@ params.aiml = [
 
 
 var bot = new UniversalBot( params );
+```
+
+
+## conversation strategy
+
+The bot will follow a conversation strategy which is laid down in a *.json file and may be passed indvidually.
+
+
+```
+
+[
+    {
+        "name": "greeting",
+        "weight": 0,
+        "in": [],
+        "out": [
+            {
+                "name": "identity",
+                "weight": 0.33
+            },
+            {
+                "name": "wheather",
+                "weight": 0.33
+            },
+            {
+                "name": "compliment",
+                "weight": 0.33
+            }
+        ]
+    },
+    {
+        "name": "identity",
+        "weight": 0,
+        "in": [
+            {
+                "name": "greeting",
+                "weight": 1
+            }
+        ],
+        "out": [
+            {
+                "name": "veracity",
+                "weight": 0.33
+            },
+            {
+                "name": "compliment",
+                "weight": 0.33
+            },
+            {
+                "name": "age",
+                "weight": 0.33
+            }
+        ]
+    },
+    etc.
+
 ```
 
 
