@@ -2,15 +2,18 @@
 
 Taking the principles of aiml - but allowing a dynamic and extendable *.js environment
 
-    ```javascript
-    npm install universalbot
-    ```
+
+
+```
+npm install universal_bot
+```
+
 
 To create a new instance of the bot
 
 
-    ```javascript
-    var UniversalBot = require("universal_chatbot);
+```
+var UniversalBot = require("universal_chatbot);
 
-    var bot = new UniversalBot();
-    ```
+var bot = new UniversalBot();
+```
