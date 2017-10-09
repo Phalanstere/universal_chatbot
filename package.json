@@ -1,6 +1,6 @@
 {
-  "name": "UniversalBot",
-  "version": "1.0.0",
+  "name": "universal_bot",
+  "version": "0.0.17",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,5 +17,9 @@
   "dependencies": {
     "aiml-high": "0.0.8",
     "debug": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Phalanstere/universal_chatbot.git"
   }
 }

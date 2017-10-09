@@ -2,16 +2,14 @@
 var meta    = require('debug')('worker:meta');
 var Session = require('./lib/session.js');
 
-var aimlHigh = require('aiml-high');
 var Aiml    = require('./lib/aiml.js'); 
 
 
-
-if (aimlHigh) meta( "AIML gefunden" );
-
 meta("Hier kommt der Universale Bot");
 
+var version = "0.0.17";
 
+console.log("UniversalBot - version: " + version)
 
 var UniversalBot = function(params) {
     var self = this;
@@ -47,9 +45,9 @@ var UniversalBot = function(params) {
 
 
     // self.aiml.input( { pattern: "No", that: "Do you like movies?"  } );
-    self.aiml.input ( { pattern: "No" }, self.session, self.process_aiml);
+    // self.aiml.input ( { pattern: "No" }, self.session, self.process_aiml);
 
-        // self.interpreter.findAnswer('Thank you for following', self.aiml_callback);
+    // self.interpreter.findAnswer('Thank you for following', self.aiml_callback);
 
     }
 
@@ -60,6 +58,8 @@ var UniversalBot = function(params) {
 
 
 
-var u = new UniversalBot();
+// var u = new UniversalBot();
 
 
+
+module.exports = UniversalBot;
