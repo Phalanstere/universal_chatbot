@@ -1,0 +1,158 @@
+[
+    {
+        "name": "greeting",
+        "weight": 0,
+        "in": [],
+        "out": [
+            {
+                "name": "identity",
+                "weight": 0.33
+            },
+            {
+                "name": "wheather",
+                "weight": 0.33
+            },
+            {
+                "name": "compliment",
+                "weight": 0.33
+            }
+        ]
+    },
+    {
+        "name": "identity",
+        "weight": 0,
+        "in": [
+            {
+                "name": "greeting",
+                "weight": 1
+            }
+        ],
+        "out": [
+            {
+                "name": "veracity",
+                "weight": 0.33
+            },
+            {
+                "name": "compliment",
+                "weight": 0.33
+            },
+            {
+                "name": "age",
+                "weight": 0.33
+            }
+        ]
+    },
+    {
+        "name": "age",
+        "weight": 0,
+        "in": [
+            {
+                "name": "identity",
+                "weight": 1
+            }
+        ],
+        "out": []
+    },
+    {
+        "name": "wheather",
+        "weight": 0,
+        "in": [
+            {
+                "name": "greeting",
+                "weight": 1
+            }
+        ],
+        "out": []
+    },
+    {
+        "name": "irritation",
+        "weight": 0,
+        "in": [],
+        "out": [
+            {
+                "name": "metacommunication",
+                "weight": 1
+            }
+        ]
+    },
+    {
+        "name": "veracity",
+        "weight": 0,
+        "in": [
+            {
+                "name": "identity",
+                "weight": 1
+            }
+        ],
+        "out": []
+    },
+    {
+        "name": "topicchange",
+        "weight": 0,
+        "in": [],
+        "out": []
+    },
+    {
+        "name": "metacommunication",
+        "weight": 0,
+        "in": [
+            {
+                "name": "irritation",
+                "weight": 1
+            }
+        ],
+        "out": []
+    },
+    {
+        "name": "compliment",
+        "weight": 0,
+        "in": [
+            {
+                "name": "greeting",
+                "weight": 0.5
+            },
+            {
+                "name": "identity",
+                "weight": 0.5
+            }
+        ],
+        "out": []
+    },
+    {
+        "name": "farewell",
+        "weight": 0,
+        "in": [],
+        "out": [
+            {
+                "name": "appointment",
+                "weight": 0.5
+            },
+            {
+                "name": "end",
+                "weight": 0.5
+            }
+        ]
+    },
+    {
+        "name": "appointment",
+        "weight": 0,
+        "in": [
+            {
+                "name": "farewell",
+                "weight": 1
+            }
+        ],
+        "out": []
+    },
+    {
+        "name": "end",
+        "weight": 0,
+        "in": [
+            {
+                "name": "farewell",
+                "weight": 1
+            }
+        ],
+        "out": []
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "pattern": "Hello *",
+        "srai": null,
+        "topic": "greeting",
+        "template": [
+            "Hi",
+            "How is it going"
+        ]
+    },
+    {
+        "pattern": "Hi *",
+        "srai": null,
+        "template": [
+            "How is it going, {name}, you old {nickname}?"
+        ]
+    }
+]
