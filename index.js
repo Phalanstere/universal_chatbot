@@ -7,31 +7,27 @@ var Aiml    = require('./lib/aiml.js');
 
 meta("Hier kommt der Universale Bot");
 
-var version = "0.0.17";
+var version = "0.0.18";
 
 console.log("UniversalBot - version: " + version)
 
 var UniversalBot = function(params) {
+
+    if (params) meta( params.aiml );
+
     var self = this;
 
     this.sessions = [];
-    this.interpreter = new aimlHigh({name:'Bot', age:'42'}, 'Goodbye');
-    this.interpreter.loadFiles(['./aiml/bot_identity.xml']);
-
-    this.aiml_callback = function(answer, wildCardArray, input){
-        // console.log(answer + ' | ' + wildCardArray + ' | ' + input);
-        console.log(input);
-        console.log(answer);
-    };
-
 
     this.process_aiml = function(params) {
-        console.log( params );
+        console.log("CALLBACK");
+        console.log( params.answer.template );
     }
 
 
     this.init = function () {
-        self.session = new Session(this);
+        self.session = new Session(this, params.strategy);
+
 
 
     var list = [
@@ -40,8 +36,11 @@ var UniversalBot = function(params) {
         ];
 
 
+    if (params.aiml ) list = params.aiml;
+
+
     // This is the AIML Bot
-    self.aiml    = new Aiml( list,self );
+    self.aiml    = new Aiml( list, self );
 
 
     // self.aiml.input( { pattern: "No", that: "Do you like movies?"  } );
