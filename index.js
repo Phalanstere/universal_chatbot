@@ -11,7 +11,7 @@ var Aiml    = require('./lib/aiml.js');
 
 meta("Hier kommt der Universale Bot");
 
-var version = "0.0.20";
+var version = "0.0.21";
 
 console.log("UniversalBot - version: " + version)
 
@@ -35,19 +35,21 @@ var UniversalBot = function(params) {
 
 
 
-    this.process_aiml = function(params) {
+    this.process_aiml = function(params, error) {
 
         if (params) {
             console.log("CALLBACK");
             console.log( params );
             var s = self.find_session( params.session_id);
             if (params.topic_change) self.change_topic( s );
-            else session.topic_counter ++;
+            else s.topic_counter ++;
 
             // könnte die Repetition hier abfangen
 
         } else {
             meta("KEINE ANTWORT");
+            
+            self.aiml_intervention(error);
         }
 
         // console.log( params.answer.template );
@@ -55,6 +57,8 @@ var UniversalBot = function(params) {
     }
 
 
+
+ 
     this.check_sessions = function() {
 
     }
@@ -73,6 +77,30 @@ var UniversalBot = function(params) {
 
 
    
+   this.aiml_intervention = function(params) {
+       meta("PRARADOXE INTERVENTION");
+       meta(params.session_id);
+    
+       var session = self.find_session(params.session_id);
+    
+       if (session) meta("Session gefunden");
+
+       
+       session.set_conversation_state( "intervention" );
+       
+        var input =  {
+            pattern: "PARDOXICAL_INTERVENTION",
+            topic: session.conversation_state
+        }
+
+        meta( input ); 
+
+        
+        self.aiml.input (  input,  session, self.process_aiml);
+        
+
+    }
+
 
     this.input = function(text, session_id, callback) {
 
