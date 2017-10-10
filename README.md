@@ -124,5 +124,32 @@ You have also the reponse, stored in the **template**. It it is just one string,
 ]
 ```
 
+The bot also supports **aiml conditions**.  
+
+
+```
+bot.aiml.input ( { pattern: "What's up?", condition:  { mood: "sad" }  }, bot.session, bot.process_aiml);
+```
+
+The correspoinding json looks like this:
+
+```
+    {
+        "pattern": "What's up?",
+        "condition": true,
+        "template": [
+            {
+            "mood": "sad",
+            "template": "I feeld really depressed"    
+            },
+            {
+            "mood": "happy",
+            "template": "Life is great"
+            }
+        ]
+    },
+```
+
+
 
 # Conversation Strategies
