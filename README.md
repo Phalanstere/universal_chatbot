@@ -35,6 +35,20 @@ params.aiml = [
 var bot = new UniversalBot( params );
 ```
 
+## bot_identity
+
+You can pass a **bot_identity** like this:
+
+
+```
+params.bot_identity = {
+    name: "UniversalBot",
+    age: 12,   
+    hobbys: ["music", "telepathy"]
+}
+```
+
+
 
 ## conversation strategy
 
@@ -131,7 +145,7 @@ The bot also supports **aiml conditions**.
 bot.aiml.input ( { pattern: "What's up?", condition:  { mood: "sad" }  }, bot.session, bot.process_aiml);
 ```
 
-The correspoinding json looks like this:
+The corresponding json looks like this:
 
 ```
     {

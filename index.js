@@ -11,7 +11,7 @@ var Aiml    = require('./lib/aiml.js');
 
 meta("Hier kommt der Universale Bot");
 
-var version = "0.0.19";
+var version = "0.0.20";
 
 console.log("UniversalBot - version: " + version)
 
