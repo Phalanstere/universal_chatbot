@@ -7,6 +7,8 @@ var Session = require('./lib/session.js');
 var Strategy = require("./lib/strategy.js");
 
 var Aiml    = require('./lib/aiml.js'); 
+var Paraphrase = require('./lib/paraphrase.js');
+
 
 
 meta("Hier kommt der Universale Bot");

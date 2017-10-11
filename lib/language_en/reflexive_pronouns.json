@@ -1,0 +1,37 @@
+[
+   {
+      "word": "myself",
+      "type": "first person singular"
+   },
+   {
+      "word": "yourself",
+      "type": "second person singular"
+   },
+   {
+      "word": "himself",
+      "type": "third person singular",
+      "gender": "male"
+   },
+   {
+      "word": "herself",
+      "type": "third person singular",
+      "gender": "female"
+   },
+   {
+      "word": "itself",
+      "type": "third person singular",
+      "gender": "neutral"
+   },
+   {
+      "word": "ourselves",
+      "type": "first person plural"
+   },
+   {
+      "word": "yourselves",
+      "type": "second person plural"
+   },
+   {
+      "word": "themselves",
+      "type": "third person plural"
+   }
+]

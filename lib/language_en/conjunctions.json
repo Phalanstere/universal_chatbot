@@ -1,0 +1,186 @@
+[
+    {
+        "word": "though",
+        "type": "concession"
+    },
+    {
+        "word": "although",
+        "type": "concession"
+    },
+    {
+        "word": "while",
+        "type": "concession"
+    },
+    {
+        "word": "if",
+        "type": "condition"
+    },
+    {
+        "word": "unless",
+        "type": "condition"
+    },
+    {
+        "word": "until",
+        "type": "condition"
+    },
+    {
+        "word": "lest",
+        "type": "condition"
+    },
+    {
+        "word": "than",
+        "type": "comparison"
+    },
+    {
+        "word": "whether",
+        "type": "comparison"
+    },
+    {
+        "word": "whereas",
+        "type": "comparison"
+    },
+    {
+        "word": "after",
+        "type": "time"
+    },
+    {
+        "word": "before",
+        "type": "time"
+    },
+    {
+        "word": "now",
+        "type": "time"
+    },
+    {
+        "word": "once",
+        "type": "time"
+    },
+    {
+        "word": "since",
+        "type": "time"
+    },
+    {
+        "word": "till",
+        "type": "time"
+    },
+    {
+        "word": "until",
+        "type": "time"
+    },
+    {
+        "word": "when",
+        "type": "time"
+    },
+    {
+        "word": "whenever",
+        "type": "time"
+    },
+    {
+        "word": "while",
+        "type": "time"
+    },
+    {
+        "word": "also",
+        "type": "adverb"
+    },
+    {
+        "word": "besides",
+        "type": "adverb",
+        "spec": "additive"
+    },
+    {
+        "word": "furthermore",
+        "type": "adverb",
+        "spec": "additive"
+    },
+    {
+        "word": "likewise",
+        "type": "adverb",
+        "spec": "additive"
+    },
+    {
+        "word": "likewise",
+        "type": "adverb",
+        "spec": "additive"
+    },
+    {
+        "word": "moreover",
+        "type": "adverb",
+        "spec": "additive"
+    },
+    {
+        "word": "however",
+        "type": "adverb",
+        "spec": "limiting"
+    },
+    {
+        "word": "nevertheless",
+        "type": "adverb",
+        "spec": "limiting"
+    },
+    {
+        "word": "nonetheless",
+        "type": "adverb",
+        "spec": "limiting"
+    },
+    {
+        "word": "still",
+        "type": "adverb",
+        "spec": "limiting"
+    },
+    {
+        "word": "otherwise",
+        "type": "adverb",
+        "spec": "limiting"
+    },
+    {
+        "word": "instead",
+        "type": "adverb",
+        "spec": "limiting"
+    },
+    {
+        "word": "conversely",
+        "type": "adverb",
+        "spec": "limiting"
+    },
+    {
+        "word": "rather",
+        "type": "adverb",
+        "spec": "limiting"
+    },
+    {
+        "word": "accordingly",
+        "type": "adverb",
+        "spec": "equal"
+    },
+    {
+        "word": "consequently",
+        "type": "adverb",
+        "spec": "equal"
+    },
+    {
+        "word": "hence",
+        "type": "adverb",
+        "spec": "equal"
+    },
+    {
+        "word": "meanwhile",
+        "type": "adverb",
+        "spec": "equal"
+    },
+    {
+        "word": "then",
+        "type": "adverb",
+        "spec": "equal"
+    },
+    {
+        "word": "therefore",
+        "type": "adverb",
+        "spec": "equal"
+    },
+    {
+        "word": "thus",
+        "type": "adverb",
+        "spec": "equal"
+    }
+]

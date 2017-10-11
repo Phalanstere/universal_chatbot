@@ -1,0 +1,118 @@
+[
+    {
+        "word": "am",
+        "stem": "be",
+        "person": "first person singular",
+        "tempus": "present"
+    },
+    {
+        "word": "are",
+        "stem": "be",
+        "person": [
+            "first person singular",
+            "first person plural",
+            "second person plural",
+            "third person plural"
+        ],
+        "tempus": "present"
+    },
+    {
+        "word": "is",
+        "stem": "be",
+        "person": "third person singular",
+        "tempus": "present"
+    },
+    {
+        "word": "was",
+        "stem": "be",
+        "person": [
+            "first person singular",
+            "third person singular"
+        ],
+        "tempus": "past"
+    },
+    {
+        "word": "were",
+        "stem": "be",
+        "tempus": "past",
+        "person": [
+            "second person singular",
+            "first person plural",
+            "second person plural",
+            "third person plural"
+        ]
+    },
+    {
+        "word": "has",
+        "stem": "have",
+        "person": "third person singular"
+    },
+    {
+        "word": "have",
+        "stem": "have",
+        "person": [
+            "first person singular",
+            "first person plural",
+            "first person plural",
+            "second person plural",
+            "third person plural"
+        ]
+    },
+    {
+        "word": "may",
+        "stem": "may",
+        "tempus": "present"
+    },
+    {
+        "word": "might",
+        "stem": "may",
+        "subjunctive": true
+    },
+    {
+        "word": "shall",
+        "stem": "shall",
+        "tempus": "present"
+    },
+    {
+        "word": "should",
+        "stem": "shall",
+        "subjunctive": true
+    },
+    {
+        "word": "do",
+        "stem": "do",
+        "tempus": "present"
+    },
+    {
+        "word": "does",
+        "stem": "do",
+        "person": "third person singular",
+        "tempus": "present"
+    },
+    {
+        "word": "did",
+        "stem": "do",
+        "tempus": "past"
+    },
+    {
+        "word": "will",
+        "stem": "will",
+        "tempus": "future"
+    },
+    {
+        "word": "would",
+        "stem": "will",
+        "tempus": "future",
+        "subjunctive": true
+    },
+    {
+        "word": "can",
+        "stem": "can",
+        "tempus": "present"
+    },
+    {
+        "word": "could",
+        "stem": "can",
+        "tempus": "past"
+    }
+]
