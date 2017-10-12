@@ -1,0 +1,26 @@
+[
+    {
+        "word": "the",
+        "type": "definite"
+    },
+    {
+        "word": "a",
+        "type": "indefinite"
+    },
+    {
+        "word": "an",
+        "type": "indefinite"
+    },
+    {
+        "word": "no",
+        "type": "negative"
+    },
+    {
+        "word": "some",
+        "type": "partitive"
+    },
+    {
+        "word": "any",
+        "type": "partitive negative"
+    }
+]

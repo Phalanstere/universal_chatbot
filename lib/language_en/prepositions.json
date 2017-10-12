@@ -1,0 +1,418 @@
+[
+    {
+        "word": "abaft",
+        "type": null
+    },
+    {
+        "word": "aboard",
+        "type": null
+    },
+    {
+        "word": "about",
+        "type": null
+    },
+    {
+        "word": "above",
+        "type": null
+    },
+    {
+        "word": "absent",
+        "type": null
+    },
+    {
+        "word": "across",
+        "type": null
+    },
+    {
+        "word": "afore",
+        "type": null
+    },
+    {
+        "word": "after",
+        "type": null
+    },
+    {
+        "word": "against",
+        "type": null
+    },
+    {
+        "word": "along",
+        "type": null
+    },
+    {
+        "word": "alongside",
+        "type": null
+    },
+    {
+        "word": "amid",
+        "type": null
+    },
+    {
+        "word": "amidst",
+        "type": null
+    },
+    {
+        "word": "among",
+        "type": null
+    },
+    {
+        "word": "amongst",
+        "type": null
+    },
+    {
+        "word": "an",
+        "type": null
+    },
+    {
+        "word": "anenst",
+        "type": null
+    },
+    {
+        "word": "apropos",
+        "type": null
+    },
+    {
+        "word": "apud",
+        "type": null
+    },
+    {
+        "word": "around",
+        "type": null
+    },
+    {
+        "word": "as",
+        "type": null
+    },
+    {
+        "word": "aside",
+        "type": null
+    },
+    {
+        "word": "astride",
+        "type": null
+    },
+    {
+        "word": "at",
+        "type": null
+    },
+    {
+        "word": "athwart",
+        "type": null
+    },
+    {
+        "word": "atop",
+        "type": null
+    },
+    {
+        "word": "barring",
+        "type": null
+    },
+    {
+        "word": "before",
+        "type": null
+    },
+    {
+        "word": "behind",
+        "type": null
+    },
+    {
+        "word": "below",
+        "type": null
+    },
+    {
+        "word": "beneath",
+        "type": null
+    },
+    {
+        "word": "beside",
+        "type": null
+    },
+    {
+        "word": "besides",
+        "type": null
+    },
+    {
+        "word": "between",
+        "type": null
+    },
+    {
+        "word": "beyond",
+        "type": null
+    },
+    {
+        "word": "but",
+        "type": null
+    },
+    {
+        "word": "by",
+        "type": null
+    },
+    {
+        "word": "circa",
+        "type": null
+    },
+    {
+        "word": "concerning",
+        "type": null
+    },
+    {
+        "word": "despite",
+        "type": null
+    },
+    {
+        "word": "down",
+        "type": null
+    },
+    {
+        "word": "during",
+        "type": null
+    },
+    {
+        "word": "except",
+        "type": null
+    },
+    {
+        "word": "excluding",
+        "type": null
+    },
+    {
+        "word": "failing",
+        "type": null
+    },
+    {
+        "word": "following",
+        "type": null
+    },
+    {
+        "word": "for",
+        "type": null
+    },
+    {
+        "word": "forenenst",
+        "type": null
+    },
+    {
+        "word": "from",
+        "type": null
+    },
+    {
+        "word": "given",
+        "type": null
+    },
+    {
+        "word": "in",
+        "type": null
+    },
+    {
+        "word": "including",
+        "type": null
+    },
+    {
+        "word": "inside",
+        "type": null
+    },
+    {
+        "word": "into",
+        "type": null
+    },
+    {
+        "word": "lest",
+        "type": null
+    },
+    {
+        "word": "like",
+        "type": null
+    },
+    {
+        "word": "mid",
+        "type": null
+    },
+    {
+        "word": "midst",
+        "type": null
+    },
+    {
+        "word": "minus",
+        "type": null
+    },
+    {
+        "word": "modulo",
+        "type": null
+    },
+    {
+        "word": "near",
+        "type": null
+    },
+    {
+        "word": "next",
+        "type": null
+    },
+    {
+        "word": "notwithstanding",
+        "type": null
+    },
+    {
+        "word": "of",
+        "type": null
+    },
+    {
+        "word": "off",
+        "type": null
+    },
+    {
+        "word": "on",
+        "type": null
+    },
+    {
+        "word": "onto",
+        "type": null
+    },
+    {
+        "word": "opposite",
+        "type": null
+    },
+    {
+        "word": "out",
+        "type": null
+    },
+    {
+        "word": "outside",
+        "type": null
+    },
+    {
+        "word": "over",
+        "type": null
+    },
+    {
+        "word": "pace",
+        "type": null
+    },
+    {
+        "word": "past",
+        "type": null
+    },
+    {
+        "word": "per",
+        "type": null
+    },
+    {
+        "word": "plus",
+        "type": null
+    },
+    {
+        "word": "pro",
+        "type": null
+    },
+    {
+        "word": "qua",
+        "type": null
+    },
+    {
+        "word": "regarding",
+        "type": null
+    },
+    {
+        "word": "round",
+        "type": null
+    },
+    {
+        "word": "sans",
+        "type": null
+    },
+    {
+        "word": "save",
+        "type": null
+    },
+    {
+        "word": "since",
+        "type": null
+    },
+    {
+        "word": "than",
+        "type": null
+    },
+    {
+        "word": "through",
+        "type": null
+    },
+    {
+        "word": "throughout",
+        "type": null
+    },
+    {
+        "word": "till",
+        "type": null
+    },
+    {
+        "word": "times",
+        "type": null
+    },
+    {
+        "word": "to",
+        "type": null
+    },
+    {
+        "word": "toward",
+        "type": null
+    },
+    {
+        "word": "towards",
+        "type": null
+    },
+    {
+        "word": "under",
+        "type": null
+    },
+    {
+        "word": "underneath",
+        "type": null
+    },
+    {
+        "word": "unlike",
+        "type": null
+    },
+    {
+        "word": "until",
+        "type": null
+    },
+    {
+        "word": "unto",
+        "type": null
+    },
+    {
+        "word": "up",
+        "type": null
+    },
+    {
+        "word": "upon",
+        "type": null
+    },
+    {
+        "word": "versus",
+        "type": null
+    },
+    {
+        "word": "via",
+        "type": null
+    },
+    {
+        "word": "vice",
+        "type": null
+    },
+    {
+        "word": "with",
+        "type": null
+    },
+    {
+        "word": "within",
+        "type": null
+    },
+    {
+        "word": "without",
+        "type": null
+    },
+    {
+        "word": "worth",
+        "type": null
+    }
+]

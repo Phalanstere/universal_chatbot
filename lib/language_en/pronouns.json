@@ -1,1 +1,67 @@
-[{"word":"i","type":"first person singular"},{"word":"you","type":"second person singular/plural"},{"word":"he","type":"third person singular male"},{"word":"she","type":"third person singular female"},{"word":"it","type":"third person singular neutral"},{"word":"we","type":"first person plural"},{"word":"they","type":"third person plural"}]
+[
+    {
+        "word": "i",
+        "type": "first person singular",
+        "grammar": "subject"
+    },
+    {
+        "word": "me",
+        "type": "first person singular",
+        "grammar": "object"
+    },
+    {
+        "word": "you",
+        "type": "second person singular/plural",
+        "grammar": "subject_object"
+    },
+    {
+        "word": "he",
+        "type": "third person singular male",
+        "grammar": "subject"
+    },
+    {
+        "word": "him",
+        "type": "third person singular male",
+        "grammar": "object"
+    },
+    {
+        "word": "she",
+        "type": "third person singular female",
+        "grammar": "subject"
+    },
+    {
+        "word": "her",
+        "type": "third person singular female",
+        "grammar": "object"
+    },
+    {
+        "word": "it",
+        "type": "third person singular neutral",
+        "grammar": "subject_object"
+    },
+    {
+        "word": "we",
+        "type": "first person plural",
+        "grammar": "subject"
+    },
+    {
+        "word": "us",
+        "type": "first person plural",
+        "grammar": "object"
+    },
+    {
+        "word": "they",
+        "type": "third person plural",
+        "grammar": "subject"
+    },
+    {
+        "word": "them",
+        "type": "third person plural",
+        "grammar": "object"
+    },
+    {
+        "word": "one",
+        "type": "third person singular",
+        "grammar": "subject_object"
+    }
+]

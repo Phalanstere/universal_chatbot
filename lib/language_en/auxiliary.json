@@ -1,5 +1,12 @@
 [
     {
+        "word": "be",
+        "stem": "be",
+        "person": "none",
+        "tempus": "infinitive"
+    },
+
+    {
         "word": "am",
         "stem": "be",
         "person": "first person singular",
