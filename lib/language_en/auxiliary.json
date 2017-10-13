@@ -52,11 +52,13 @@
     {
         "word": "has",
         "stem": "have",
-        "person": "third person singular"
+        "person": "third person singular",
+        "tempus": "present"
     },
     {
         "word": "have",
         "stem": "have",
+        "tempus": "present",
         "person": [
             "first person singular",
             "first person plural",
@@ -65,6 +67,22 @@
             "third person plural"
         ]
     },
+    {
+        "word": "had",
+        "stem": "have",
+        "person": [
+            "first person singular",
+            "third person singular"
+        ],
+        "tempus": "past"
+    },
+
+    {
+        "word": "must",
+        "stem": "must",
+        "tempus": "indinitive"
+    },
+
     {
         "word": "may",
         "stem": "may",

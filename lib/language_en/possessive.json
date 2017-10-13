@@ -1,0 +1,33 @@
+[
+    {
+        "word": "my",
+        "type": "first_person_singular"
+    },
+    {
+        "word": "your",
+        "type": "second_person_singular_plural"
+    },
+    {
+        "word": "her",
+        "type": "third_person_singular",
+        "gender": "female"
+    },
+    {
+        "word": "his",
+        "type": "third_person_singular",
+        "gender": "male"
+    },
+    {
+        "word": "its",
+        "type": "third_person_singular",
+        "gender": "neutral"
+    },
+    {
+        "word": "our",
+        "type": "first_person_plural"
+    },
+    {
+        "word": "their",
+        "type": "third_person_plural"
+    }
+]
