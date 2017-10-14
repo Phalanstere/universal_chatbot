@@ -39,6 +39,14 @@
         "tempus": "past"
     },
     {
+        "word": "been",
+        "stem": "be",
+        "person": [
+            "all"
+        ],
+        "tempus": "participle"
+    },
+    {
         "word": "were",
         "stem": "be",
         "tempus": "past",
@@ -80,17 +88,20 @@
     {
         "word": "must",
         "stem": "must",
-        "tempus": "indinitive"
+        "tempus": "present",
+        "genus": "modal"
     },
 
     {
         "word": "may",
         "stem": "may",
-        "tempus": "present"
+        "tempus": "present",
+        "genus": "modal"
     },
     {
         "word": "might",
         "stem": "may",
+        "genus": "modal",
         "subjunctive": true
     },
     {
@@ -101,8 +112,25 @@
     {
         "word": "should",
         "stem": "shall",
+        "genus": "modal",
         "subjunctive": true
     },
+    {
+        "word": "can",
+        "stem": "can",
+        "tempus": "present"
+    },
+    {
+        "word": "could",
+        "stem": "can",
+        "genus": "modal",
+        "tempus": "past",
+        "subjunctive": true
+    },
+
+
+
+
     {
         "word": "do",
         "stem": "do",
@@ -127,17 +155,8 @@
     {
         "word": "would",
         "stem": "will",
-        "tempus": "future",
+        "tempus": "present",
+        "genus": "modal",
         "subjunctive": true
-    },
-    {
-        "word": "can",
-        "stem": "can",
-        "tempus": "present"
-    },
-    {
-        "word": "could",
-        "stem": "can",
-        "tempus": "past"
     }
 ]
