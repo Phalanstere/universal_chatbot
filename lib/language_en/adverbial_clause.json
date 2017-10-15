@@ -1,0 +1,70 @@
+[
+    {
+        "word": "until",
+        "mode": "time"
+    },
+    {
+        "word": "after",
+        "mode": "time"
+    },
+    {
+        "word": "until",
+        "mode": "time"
+    },
+    {
+        "word": "when",
+        "mode": "time"
+    },
+    {
+        "word": "as soon as",
+        "mode": "time"
+    },
+    {
+        "word": "wherever",
+        "mode": "place"
+    },
+    {
+        "word": "like it is",
+        "mode": "manner"
+    },
+    {
+        "word": "the way",
+        "mode": "manner"
+    },
+    {
+        "word": "as {} as",
+        "mode": "manner"
+    },
+    {
+        "word": "than",
+        "mode": "comparison"
+    },
+    {
+        "word": "so {} as",
+        "mode": "comparison"
+    },
+    {
+        "word": "as if {}",
+        "mode": "condition"
+    },
+    {
+        "word": "if",
+        "mode": "condition"
+    },
+    {
+        "word": "although",
+        "mode": "concession"
+    },
+    {
+        "word": "even if",
+        "mode": "concession"
+    },
+    {
+        "word": "because",
+        "mode": "reason"
+    },
+    {
+        "word": "since",
+        "mode": "reason"
+    }
+]
