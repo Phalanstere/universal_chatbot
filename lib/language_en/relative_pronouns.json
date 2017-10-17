@@ -1,0 +1,41 @@
+[
+    {
+        "word": "who",
+        "type": "subject_object"
+    },
+    {
+        "word": "which",
+        "type": "subject_object"
+    },
+    {
+        "word": "whose",
+        "type": "genitive"
+    },
+    {
+        "word": "whom",
+        "type": "object"
+    },
+    {
+        "word": "that",
+        "type": "subject_object"
+    },
+    {
+        "word": "which",
+        "type": "sentence"
+    },
+    {
+        "word": "when",
+        "type": "relative_adverb",
+        "mode": "time"
+    },
+    {
+        "word": "where",
+        "type": "relative_adverb",
+        "mode": "space"
+    },
+    {
+        "why": "why",
+        "type": "relative_adverb",
+        "mode": "reason"
+    }
+]
