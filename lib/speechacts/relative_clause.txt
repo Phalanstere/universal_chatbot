@@ -1,0 +1,91 @@
+ var seq = {
+                   type: "relative_clause",
+                   list: "relative_pronouns", // the array that hold the entries
+
+                   // who thougtfully looked
+                   // who did not see
+                   // skillfully was beaten
+                   //            had eaten
+                   // who could not see                 
+     
+                   sequence: [
+                   
+                        {
+                        check_auxiliary: function(params) {
+                                    if (params.aux && ! params.verb) {
+                                        console.log("AUX IST PRÄDIKAT")
+                                    }
+                                }, 
+
+                        type: "predicate",
+                        optional: false,
+                        pattern:     {
+                                    sequence: [
+                                                { type: ADVERB, optional: true, desc: "adverb"}, 
+                                                { type: AUXILIARY, optional: true, desc: "auxiliary" },
+                                                { type: NEGATION, optional: true, desc: "negation" },
+                                                { type: VERB, optional: false, desc: "verb", delimiter: [ VERB] }
+                                            ],
+                                    delimiter: [ VERB],
+                                    on_finished: this.check_auxiliary
+                                    },
+                        },
+                        {
+                        /*
+                            the street
+                            the crowded street
+                            the extremely crowded street
+
+                        */    
+                        type: "object",
+                        optional: true,
+                        pattern:    {
+                                    sequence: [
+                                                { type: ARTICLE, optional: true, desc: "article"}, 
+                                                { type: DEGREE_ADVERB, optional: true, desc: "degree_adverb"},
+                                                { type: ADVERB, optional: true, desc: "adverb"},
+                                                { type: ADJECTIVE, optional: true, desc: "adjective" },
+                                                { type: NOUN, optional: false, desc: "noun", delimiter: [ VERB], }
+                                            ],
+                                    delimiter: [ PREPOSITION, NOUN],
+                                    on_finished: null
+                                    },
+                        },
+                        {
+                        type: "genitive_object",
+                        optional: true,
+                            pattern:    {
+                                    sequence: [
+                                                { type: GENITIVE_MARKER, optional: false, desc: "genitive_marker"}, 
+                                                { type: ARTICLE, optional: true, desc: "article"}, 
+                                                { type: DEGREE_ADVERB, optional: true, desc: "degree_adverb"},
+                                                { type: ADJECTIVE, optional: true, desc: "adjective" },
+                                                { type: NOUN, optional: false, desc: "noun" }
+                                            ],
+                                    delimiter: [ PREPOSITION, NOUN],
+                                    on_finished: null
+                                    },
+
+                        },
+                        // in the mirror
+                        // in the blind mirror
+                        {
+                        type: "prepositional_object",
+                        optional: true,
+                        pattern:    {
+                                    sequence: [
+                                            { type: PREPOSITION, optional: false, desc: "adverb"}, 
+                                            { type: ARTICLE, optional: true, desc: "article"}, 
+                                            { type: DEGREE_ADVERB, optional: true, desc: "degree_adverb"},
+                                            { type: ADJECTIVE, optional: true, desc: "adjective" },
+                                            { type: NOUN, optional: false, desc: "noun" }
+                                        ],
+                                    delimiter: [ NOUN],
+                                    }    
+                        }
+
+                        
+
+                   ]
+
+         }

@@ -6254,7 +6254,6 @@
             "restricting"
         ]
     },
-
     {
         "word": [
             "retain",
@@ -8989,6 +8988,123 @@
             "zoomed",
             "zooms",
             "zooming"
+        ]
+    },
+    {
+        "word": [
+            "minimize",
+            "minimized",
+            "minimized",
+            "minimizes",
+            "minimizing"
+        ]
+    },
+    {
+        "word": [
+            "belittle",
+            "belittled",
+            "belittled",
+            "belittles",
+            "belittling"
+        ]
+    },
+    {
+        "word": [
+            "denigrate",
+            "denigrated",
+            "denigrated",
+            "denigrates",
+            "denigrating"
+        ]
+    },
+    {
+        "word": [
+            "derogate",
+            "derogated",
+            "derogated",
+            "derogates",
+            "derogating"
+        ]
+    },
+    {
+        "word": [
+            "confirm",
+            "confirmd",
+            "confirmd",
+            "confirms",
+            "confirming"
+        ]
+    },
+    {
+        "word": [
+            "corroborate",
+            "corroborated",
+            "corroborated",
+            "corroborates",
+            "corroborating"
+        ]
+    },
+    {
+        "word": [
+            "sustain",
+            "sustaind",
+            "sustaind",
+            "sustains",
+            "sustaining"
+        ]
+    },
+    {
+        "word": [
+            "substantiate",
+            "substantiated",
+            "substantiated",
+            "substantiates",
+            "substantiating"
+        ]
+    },
+    {
+        "word": [
+            "support",
+            "supportd",
+            "supportd",
+            "supports",
+            "supporting"
+        ]
+    },
+    {
+        "word": [
+            "affirm",
+            "affirmd",
+            "affirmd",
+            "affirms",
+            "affirming"
+        ]
+    },
+    {
+        "word": [
+            "paraphrase",
+            "paraphrased",
+            "paraphrased",
+            "paraphrases",
+            "paraphrasing"
+        ]
+    },
+    {
+        "word": [
+            "rephrase",
+            "rephrased",
+            "rephrased",
+            "rephrases",
+            "rephrasing"
+        ]
+    },
+    {
+        "word": [
+            "reword",
+            "rewordd",
+            "rewordd",
+            "rewords",
+            "rewording"
         ]
     }
 ]
