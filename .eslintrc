@@ -1,0 +1,12 @@
+{
+  "extends": ["eslint:recommended"],
+  "rules": {
+    // Additional, per-project rules...
+    "no-console": 0,
+    "indent": [2, 4]
+  }, 
+  "env":{
+    "es6": false,
+    "node": true
+  }
+}
