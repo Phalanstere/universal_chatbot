@@ -2,3 +2,7 @@ node_modules/
 aiml
 
 test.js
+
+analysis.json
+valid_entries.json
+exclusive_valid_entries.json

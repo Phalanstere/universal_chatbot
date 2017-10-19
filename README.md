@@ -166,4 +166,11 @@ The corresponding json looks like this:
 
 
 
+# Syntax detection
+
+The bot has an inbuilt **syntax detection** which allows to detect simple sentences (including adverbial phrases and relative sentences)
+
+
+
+
 # Conversation Strategies
