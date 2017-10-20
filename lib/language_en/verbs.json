@@ -9029,8 +9029,8 @@
     {
         "word": [
             "confirm",
-            "confirmd",
-            "confirmd",
+            "confirmed",
+            "confirmed",
             "confirms",
             "confirming"
         ]
@@ -9047,8 +9047,8 @@
     {
         "word": [
             "sustain",
-            "sustaind",
-            "sustaind",
+            "sustained",
+            "sustained",
             "sustains",
             "sustaining"
         ]
@@ -9065,8 +9065,8 @@
     {
         "word": [
             "support",
-            "supportd",
-            "supportd",
+            "supported",
+            "supported",
             "supports",
             "supporting"
         ]
@@ -9074,8 +9074,8 @@
     {
         "word": [
             "affirm",
-            "affirmd",
-            "affirmd",
+            "affirmed",
+            "affirmed",
             "affirms",
             "affirming"
         ]
@@ -9101,10 +9101,163 @@
     {
         "word": [
             "reword",
-            "rewordd",
-            "rewordd",
+            "reworded",
+            "reworded",
             "rewords",
             "rewording"
+        ]
+    },
+    {
+        "word": [
+            "perpetrate",
+            "perpetrated",
+            "perpetrated",
+            "perpetrates",
+            "perpetrating"
+        ]
+    },
+    {
+        "word": [
+            "commit",
+            "commited",
+            "commited",
+            "commits",
+            "commiting"
+        ]
+    },
+    {
+        "word": [
+            "pull",
+            "pulled",
+            "pulled",
+            "pulls",
+            "pulling"
+        ]
+    },
+    {
+        "word": [
+            "remember",
+            "remembered",
+            "remembered",
+            "remembers",
+            "remembering"
+        ]
+    },
+    {
+        "word": [
+            "retrieve",
+            "retrieved",
+            "retrieved",
+            "retrieves",
+            "retrieving"
+        ]
+    },
+    {
+        "word": [
+            "recall",
+            "recalled",
+            "recalled",
+            "recalls",
+            "recalling"
+        ]
+    },
+    {
+        "word": [
+            "recollect",
+            "recollected",
+            "recollected",
+            "recollects",
+            "recollecting"
+        ]
+    },
+    {
+        "word": [
+            "think",
+            "thought",
+            "thought",
+            "thinks",
+            "thinking"
+        ]
+    },
+    {
+        "word": [
+            "cleanse",
+            "cleansed",
+            "cleansed",
+            "cleanses",
+            "cleansing"
+        ]
+    },
+    {
+        "word": [
+            "clean",
+            "cleaned",
+            "cleaned",
+            "cleans",
+            "cleaning"
+        ]
+    },
+    {
+        "word": [
+            "analyze",
+            "analyzed",
+            "analyzed",
+            "analyzes",
+            "analyzing"
+        ]
+    },
+    {
+        "word": [
+            "analyze",
+            "analyzed",
+            "analyzed",
+            "analyzes",
+            "analyzing"
+        ]
+    },
+    {
+        "word": [
+            "analyse",
+            "analysed",
+            "analysed",
+            "analyses",
+            "analysing"
+        ]
+    },
+    {
+        "word": [
+            "study",
+            "studied",
+            "studied",
+            "studies",
+            "studying"
+        ]
+    },
+    {
+        "word": [
+            "examine",
+            "examined",
+            "examined",
+            "examines",
+            "examining"
+        ]
+    },
+    {
+        "word": [
+            "canvass",
+            "canvassed",
+            "canvassed",
+            "canvasss",
+            "canvassing"
+        ]
+    },
+    {
+        "word": [
+            "canvas",
+            "canvased",
+            "canvased",
+            "canvass",
+            "canvasing"
         ]
     }
 ]

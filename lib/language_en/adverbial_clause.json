@@ -66,5 +66,11 @@
     {
         "word": "since",
         "mode": "reason"
+    }, 
+    {
+        "word": "because",
+        "mode": "reason"
     }
+
+
 ]

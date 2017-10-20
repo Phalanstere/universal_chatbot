@@ -159,13 +159,22 @@
                         "pronoun"
                      ]
                   },
+                    "delimiter": [
+                        {
+                            "pronoun": [
+                                true
+                            ]
+                        }
+                    ],
+
+
                   "optional": false,
                   "desc": "noun"
                }
             ],
             "delimiter": [
                {
-                  "type": "preposition"
+                  "type": "preposition, pronoun"
                },
                {
                   "type": [
