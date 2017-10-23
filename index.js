@@ -8,22 +8,31 @@ var Strategy = require("./lib/strategy.js");
 
 var Aiml    = require('./lib/aiml.js'); 
 var Paraphrase = require('./lib/paraphrase.js');
-
+var Intentions = require('./lib/intentions.js');
 
 
 meta("Hier kommt der Universale Bot");
 
-var version = "0.0.22";
+var version = "0.0.23";
 
 console.log("UniversalBot - version: " + version)
 
 var UniversalBot = function(params) {
 
-    if (params) meta( params.aiml );
-
     var self = this;
 
+    if (params) meta( params.aiml );
+
+
+    this.intentions = null;
+    if (params.intentions) this.intentions = new Intentions( params.intentions );
+   
+
+
     this.sessions = [];
+
+
+
 
     this.change_topic = function(session) {
                 
