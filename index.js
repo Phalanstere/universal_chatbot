@@ -13,7 +13,7 @@ var Intentions = require('./lib/intentions.js');
 
 meta("Hier kommt der Universale Bot");
 
-var version = "0.0.23";
+var version = "0.0.24";
 
 console.log("UniversalBot - version: " + version)
 
