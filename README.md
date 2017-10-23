@@ -22,6 +22,38 @@ var bot = new UniversalBot();
 
 Usuallay, you you would pass some parameters, al list of **aiml-type** files, a **strategy** and so forth.
 
+
+# File structure and internal logic
+
+**index.js** is where it all begins. Here you define the bot's psychology, set the parameters and so forth.
+
+The bot may follow a strategy.
+
+## AIML-Layer 
+
+The most fundamental, in a way *hard-wird* layer is the aiml-level.
+Here you just input a phrase - the bozt scans the respectives **aiml-files** and gives an answer
+
+## The paraphrase-Layer
+
+This layer resembles the classical **eliza-bot** logique.
+Here the bots gets the input - analyses it grammatically - and gives a return.
+
+## AIML combined with intentions
+
+
+
+
+
+
+The **speechact.js** file refers to the analysis and detection of speechacts. This includes a thougrough syntax analysis.
+
+
+
+
+
+
+
 ## aiml files
 
 ```

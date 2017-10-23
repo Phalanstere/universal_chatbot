@@ -13,7 +13,7 @@ var Paraphrase = require('./lib/paraphrase.js');
 
 meta("Hier kommt der Universale Bot");
 
-var version = "0.0.21";
+var version = "0.0.22";
 
 console.log("UniversalBot - version: " + version)
 
@@ -139,7 +139,6 @@ var UniversalBot = function(params) {
     this.init = function () {
         // self.session = new Session(this, params.strategy);
         
-
         if ( params.strategy) {
             meta("STRATEGY IS DEFINED");
             var f = resolve( params.strategy );
@@ -150,7 +149,6 @@ var UniversalBot = function(params) {
             meta("BOT_IDENTITY");
             self.bot_identity = params.bot_identity;
         }
-
 
         /////
         meta("NOW THE AIML PART");
@@ -163,17 +161,19 @@ var UniversalBot = function(params) {
 
         if (params.aiml ) list = params.aiml;
 
-
         // This is the AIML Bot
         self.aiml    = new Aiml( list, self );
-
 
         // self.aiml.input( { pattern: "No", that: "Do you like movies?"  } );
         // self.aiml.input ( { pattern: "No" }, self.session, self.process_aiml);
 
         // self.interpreter.findAnswer('Thank you for following', self.aiml_callback);
 
+
     }
+
+
+
 
 
     self.init();
