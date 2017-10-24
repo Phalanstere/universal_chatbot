@@ -24,86 +24,6 @@ Usuallay, you you would pass some parameters, al list of **aiml-type** files, a 
 
 
 
-# Working with intentions
-
-An intention file looks like this:
-
-```
-[
-    {
-        "name": "price",
-        "weight": 0,
-        "in": [],
-        "out": [
-            {
-                "name": "registration",
-                "weight": 0.2
-            },
-            {
-                "name": "payment_mode",
-                "weight": 0.2
-            },
-            {
-                "name": "withdrawal",
-                "weight": 0.2
-            },
-            {
-                "name": "plausibility",
-                "weight": 0.2
-            },
-            {
-                "name": "info_text",
-                "weight": 0.2
-            }
-        ],
-        "aiml": "HOW_MUCH",
-        "keywords": [
-            "price",
-            "how much",
-            "pay"
-        ],
-        "excludes": [
-            "NEGATION"
-        ]
-    }
-    etc. 
-]
-```
-
-Each node of this consists of **ins** and **outs**  - that means reference to other nodes. The nodes - taken as a whole - form a Markow chain.
-
-Building such a chain is quite easy, and there some methods in the **bot.intentions.intentions** object.
-
-```
-    var obj = bot.intentions.intentions;
-```
-
-Here you add some nodes
-```
-    obj.addNodes(   ['price',
-                    'registration', 
-                    'payment_mode',
-                    'withdrawal'
-                    ]);
-```
-
-This defines a node in detail
-```
-    obj.characterize("price", {
-        aiml: "HOW_MUCH",
-        keywords: ["price", "how much", "pay"],
-        excludes: ['NEGATION']
-        })
-```
-
-and with this function you create a Markow-relation
-
-```
-    self.addRelation("price", ["registration", "payment_mode", "withdrawal"]); 
-```
-
-
-
 
 
 # File structure and internal logic
@@ -275,6 +195,89 @@ The corresponding json looks like this:
         ]
     },
 ```
+
+
+# Working with intentions
+
+An intention file looks like this:
+
+```
+[
+    {
+        "name": "price",
+        "weight": 0,
+        "in": [],
+        "out": [
+            {
+                "name": "registration",
+                "weight": 0.2
+            },
+            {
+                "name": "payment_mode",
+                "weight": 0.2
+            },
+            {
+                "name": "withdrawal",
+                "weight": 0.2
+            },
+            {
+                "name": "plausibility",
+                "weight": 0.2
+            },
+            {
+                "name": "info_text",
+                "weight": 0.2
+            }
+        ],
+        "aiml": "HOW_MUCH",
+        "keywords": [
+            "price",
+            "how much",
+            "pay"
+        ],
+        "excludes": [
+            "NEGATION"
+        ]
+    }
+    etc. 
+]
+```
+
+Each node of this consists of **ins** and **outs**  - that means reference to other nodes. The nodes - taken as a whole - form a Markow chain.
+
+Building such a chain is quite easy, and there some methods in the **bot.intentions.intentions** object.
+
+```
+    var obj = bot.intentions.intentions;
+```
+
+Here you add some nodes
+```
+    obj.addNodes(   ['price',
+                    'registration', 
+                    'payment_mode',
+                    'withdrawal'
+                    ]);
+```
+
+This defines a node in detail
+```
+    obj.characterize("price", {
+        aiml: "HOW_MUCH",
+        keywords: ["price", "how much", "pay"],
+        excludes: ['NEGATION']
+        })
+```
+With the **aiml** parameter you can set an aiml pointer.
+When the user input contains some of the **keywords**, the ususal chain will be overriden and the intention process is privileged.
+
+With this function you create a Markow-relation between different nodes.
+
+```
+    self.addRelation("price", ["registration", "payment_mode", "withdrawal"]); 
+```
+
+
 
 
 
