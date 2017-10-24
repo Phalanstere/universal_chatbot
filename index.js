@@ -3,12 +3,14 @@
 var resolve         = require('path').resolve;
 
 var meta    = require('debug')('worker:meta');
+var debug   = require('debug')('intentions');
+
 var Session = require('./lib/session.js');
 var Strategy = require("./lib/strategy.js");
 
 var Aiml    = require('./lib/aiml.js'); 
 var Paraphrase = require('./lib/paraphrase.js');
-var Intentions = require('./lib/intentions.js');
+var IntentionManager = require('./lib/intentions/intention_manager.js');
 
 
 meta("Hier kommt der Universale Bot");
@@ -25,7 +27,7 @@ var UniversalBot = function(params) {
 
 
     this.intentions = null;
-    if (params.intentions) this.intentions = new Intentions( params.intentions );
+    if (params.intentions) this.intentions = new IntentionManager ( params.intentions );
    
 
 
@@ -137,7 +139,24 @@ var UniversalBot = function(params) {
             topic: session.conversation_state.name
         }
 
-        self.aiml.input (  input,  session, self.process_aiml);
+        // Whene an intention can be found, it should have priority
+        if ( self.intentions) {
+            debug("Hier sollte überprüft werden, ob der Input auf eine Intention trifft");
+            var node = self.intentions.check( input );
+            if (node.aiml) {
+                debug ("HIER KOMMT " + node.aiml );
+                input.pattern = node.aiml;
+                debug ( input.topic = "intention" );
+
+                self.intentions.actual = node;
+                
+
+                self.aiml.input (  input,  session, self.process_aiml);
+            }
+
+            
+            }
+        else self.aiml.input (  input,  session, self.process_aiml);
 
 
     }

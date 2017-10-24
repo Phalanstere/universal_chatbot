@@ -23,6 +23,84 @@ var bot = new UniversalBot();
 Usuallay, you you would pass some parameters, al list of **aiml-type** files, a **strategy** and so forth.
 
 
+
+# Working with intentions
+
+An intention file looks like this:
+
+```
+[
+    {
+        "name": "price",
+        "weight": 0,
+        "in": [],
+        "out": [
+            {
+                "name": "registration",
+                "weight": 0.2
+            },
+            {
+                "name": "payment_mode",
+                "weight": 0.2
+            },
+            {
+                "name": "withdrawal",
+                "weight": 0.2
+            },
+            {
+                "name": "plausibility",
+                "weight": 0.2
+            },
+            {
+                "name": "info_text",
+                "weight": 0.2
+            }
+        ],
+        "aiml": "HOW_MUCH",
+        "keywords": [
+            "price",
+            "how much",
+            "pay"
+        ],
+        "excludes": [
+            "NEGATION"
+        ]
+    }
+    etc. 
+]
+```
+
+Each node of this consists of **ins** and **outs**  - that means reference to othwer nodes. The nodes form a Markow chain.
+
+Buiding such a chain is quite easy, and there some methods in the **bot.intentions.intentions** object.
+
+```
+    var obj = bot.intentions.intentions;
+
+    // Here you add some nodes
+
+    obj.addNodes(   ['price',
+                    'registration', 
+                    'payment_mode',
+                    'withdrawal'
+                    ]);
+
+    // This defines a node in detail
+    obj.characterize("price", {
+        aiml: "HOW_MUCH",
+        keywords: ["price", "how much", "pay"],
+        excludes: ['NEGATION']
+        })
+    // and with this function you create a Markow-relation
+    self.addRelation("price", ["registration", "payment_mode", "withdrawal"]); 
+    
+
+```
+
+
+
+
+
 # File structure and internal logic
 
 **index.js** is where it all begins. Here you define the bot's psychology, set the parameters and so forth.
