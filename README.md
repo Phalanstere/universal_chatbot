@@ -278,6 +278,23 @@ With this function you create a Markow-relation between different nodes.
 ```
 
 
+# Bot interaction
+
+bot interaction is quite easy. As a first parameter you pass the input, then the session_id (that will be returned after you have started a conversation, then a callback)
+
+
+```
+bot.input("Who is the leader of the seminaire", null, function( data, error ) {
+
+    if (data) {
+        console.log( data );
+    }
+
+});
+
+```
+
+
 
 
 

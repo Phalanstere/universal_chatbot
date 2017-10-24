@@ -51,7 +51,7 @@ var UniversalBot = function(params) {
     this.process_aiml = function(params, error) {
 
         if (params) {
-            console.log("CALLBACK");
+            console.log("HIER KOMME DER CALLBACK");
             console.log( params );
             var s = self.find_session( params.session_id);
             if (params.topic_change) self.change_topic( s );
@@ -150,8 +150,8 @@ var UniversalBot = function(params) {
 
                 self.intentions.actual = node;
                 
-
-                self.aiml.input (  input,  session, self.process_aiml);
+                self.aiml.input (  input,  session, callback );
+                // self.aiml.input (  input,  session, self.process_aiml);
             }
 
             
