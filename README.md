@@ -70,31 +70,36 @@ An intention file looks like this:
 ]
 ```
 
-Each node of this consists of **ins** and **outs**  - that means reference to othwer nodes. The nodes form a Markow chain.
+Each node of this consists of **ins** and **outs**  - that means reference to other nodes. The nodes - taken as a whole - form a Markow chain.
 
-Buiding such a chain is quite easy, and there some methods in the **bot.intentions.intentions** object.
+Building such a chain is quite easy, and there some methods in the **bot.intentions.intentions** object.
 
 ```
     var obj = bot.intentions.intentions;
+```
 
-    // Here you add some nodes
-
+Here you add some nodes
+```
     obj.addNodes(   ['price',
                     'registration', 
                     'payment_mode',
                     'withdrawal'
                     ]);
+```
 
-    // This defines a node in detail
+This defines a node in detail
+```
     obj.characterize("price", {
         aiml: "HOW_MUCH",
         keywords: ["price", "how much", "pay"],
         excludes: ['NEGATION']
         })
-    // and with this function you create a Markow-relation
-    self.addRelation("price", ["registration", "payment_mode", "withdrawal"]); 
-    
+```
 
+and with this function you create a Markow-relation
+
+```
+    self.addRelation("price", ["registration", "payment_mode", "withdrawal"]); 
 ```
 
 
