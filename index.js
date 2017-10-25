@@ -149,6 +149,8 @@ var UniversalBot = function(params) {
         debugs ("Hier kommt die Eingabe: " + text + " type " + type);
         if (! session_id)  session_id = self.create_session();
         var session = self.find_session(session_id);
+        
+        debugs( "STATE " + session.conversation_state );
 
         var input =  {
             pattern: text,
