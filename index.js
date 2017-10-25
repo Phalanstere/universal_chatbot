@@ -4,9 +4,13 @@ var resolve         = require('path').resolve;
 
 var meta    = require('debug')('worker:meta');
 var debug   = require('debug')('intentions');
+var debugs  = require('debug')('input');
 
 var Session = require('./lib/session.js');
 var Strategy = require("./lib/strategy.js");
+
+
+
 
 var Aiml    = require('./lib/aiml.js'); 
 var Paraphrase = require('./lib/paraphrase.js');
@@ -40,9 +44,12 @@ var UniversalBot = function(params) {
                 
         var actual = session.conversation_state;
         meta ("aktueller Status " + actual);
-        var x = self.strategy.chain.next( actual );
 
-        session.set_conversation_state(x.name);
+        if ( self.stragey.chain) {
+            var x = self.strategy.chain.next( actual );
+            session.set_conversation_state(x.name);
+        } else meta("Die Strategiekette ist noch nicht da");
+
     }
 
 
@@ -61,8 +68,8 @@ var UniversalBot = function(params) {
 
         } else {
             meta("KEINE ANTWORT");
-            
-            self.aiml_intervention(error);
+            meta ( error );
+            self.aiml_intervention(params);
         }
 
         // console.log( params.answer.template );
@@ -94,13 +101,10 @@ var UniversalBot = function(params) {
        meta("PRARADOXE INTERVENTION");
        meta(params.session_id);
     
+       if( params.session_id) {
        var session = self.find_session(params.session_id);
-    
-       if (session) meta("Session gefunden");
+       if (session ) session.set_conversation_state( "intervention" );
 
-       
-       session.set_conversation_state( "intervention" );
-       
         var input =  {
             pattern: "PARDOXICAL_INTERVENTION",
             topic: session.conversation_state
@@ -108,31 +112,38 @@ var UniversalBot = function(params) {
 
         meta( input ); 
 
-        
         self.aiml.input (  input,  session, self.process_aiml);
+
+       }
+       else 
+           {
+           meta("Es gibt keine SessionID");
+           }
+
         
 
     }
 
 
-    this.input = function(text, session_id, callback) {
+    this.create_session = function() {
+        debugs("Neue Sitzung wird erzeugt ");   
+        var s = new Session(this, params.strategy);
 
-        meta("Hier kommt die Eingabe: " + text);
-        if (! session_id) {
-            meta("Neue Sitzung wird erzeugt ");
-            
-            var s = new Session(this, params.strategy);
-            
-            s.set_conversation_state( self.strategy.chain.nodes[0].name );
+        meta (" Die Strategie ist: " + params.strategy );
 
-            session_id = s.id;
-            self.sessions.push(s);
-            meta("Number of sessions " + self.sessions.length);
-        }
+        s.set_conversation_state( self.strategy.chain.nodes[0].name );
 
+        var session_id = s.id;
+        self.sessions.push(s);
+        debugs("Number of already running sessions " + self.sessions.length); 
+        return session_id;
+    }
+
+
+    this.input = function(text, session_id, type, callback) {
+        debugs ("Hier kommt die Eingabe: " + text + " type " + type);
+        if (! session_id)  session_id = self.create_session();
         var session = self.find_session(session_id);
-
-
 
         var input =  {
             pattern: text,
@@ -141,22 +152,41 @@ var UniversalBot = function(params) {
 
         // Whene an intention can be found, it should have priority
         if ( self.intentions) {
-            debug("Hier sollte überprüft werden, ob der Input auf eine Intention trifft");
-            var node = self.intentions.check( input );
-            if (node.aiml) {
-                debug ("HIER KOMMT " + node.aiml );
-                input.pattern = node.aiml;
-                debug ( input.topic = "intention" );
+                debugs ("INTENTIONEN - Hier sollte überprüft werden, ob der Input auf eine Intention trifft");
+                var node = self.intentions.check( input );
+                debugs( node );
 
-                self.intentions.actual = node;
-                
-                self.aiml.input (  input,  session, callback );
-                // self.aiml.input (  input,  session, self.process_aiml);
-            }
+                if (node) {
+                    debug ("HIER KOMMT " + node.aiml );
+                    input.pattern = node.aiml;
+                    debug ( input.topic = "intention" );
 
-            
+                    self.intentions.actual = node;
+                    
+                    debugs ("Es folgt aiml.input");
+                    self.aiml.input (  input,  session, callback );
+                    // self.aiml.input (  input,  session, self.process_aiml);
+                }
+                else  {
+                    debugs("Es gibt keine erkennbare Intention");
+                    
+                    switch(type) {
+                        case "AIML":
+                            self.aiml.input (  input,  session, callback );
+                        break;
+
+                        default:
+                            debugs("noch nicht definiert");
+                        bteak;
+                    }
+
+                }
             }
-        else self.aiml.input (  input,  session, self.process_aiml);
+        else 
+            {
+            debugs ("Hier kommt reines AIML - ohne Intentionen ");
+            self.aiml.input (  input,  session, self.process_aiml);
+            }
 
 
     }
@@ -170,6 +200,8 @@ var UniversalBot = function(params) {
         if ( params.strategy) {
             meta("STRATEGY IS DEFINED");
             var f = resolve( params.strategy );
+            console.log( f );
+
             self.strategy = new Strategy("normal", f );
         }        
 
