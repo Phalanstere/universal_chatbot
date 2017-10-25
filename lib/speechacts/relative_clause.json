@@ -1,0 +1,246 @@
+{
+    "type": "relative_clause",
+    "list": "relative_pronouns",
+    "sequence": [
+        {
+            "type": "predicate",
+            "optional": false,
+            "pattern": {
+                "sequence": [
+                    {
+                        "type": {
+                            "type": "adverb"
+                        },
+                        "optional": true,
+                        "desc": "adverb"
+                    },
+                    {
+                        "type": {
+                            "type": "auxiliary"
+                        },
+                        "optional": true,
+                        "desc": "auxiliary"
+                    },
+                    {
+                        "type": {
+                            "type": "negation"
+                        },
+                        "optional": true,
+                        "desc": "negation"
+                    },
+                    {
+                        "type": {
+                            "type": [
+                                "verb",
+                                "noun",
+                                "adjective"
+                            ]
+                        },
+                        "optional": false,
+                        "desc": "verb"
+                    }
+                ],
+                "delimiter": [
+                    {
+                        "type": "preposition"
+                    },
+                    {
+                        "type": [
+                            "noun",
+                            "pronoun"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "object",
+            "optional": true,
+            "pattern": {
+                "sequence": [
+                    {
+                        "type": {
+                            "type": [
+                                "article",
+                                "possessive",
+                                "demonstrative"
+                            ]
+                        },
+                        "optional": true,
+                        "desc": "article"
+                    },
+                    {
+                        "type": {
+                            "type": "degree_adverb"
+                        },
+                        "optional": true,
+                        "desc": "degree_adverb"
+                    },
+                    {
+                        "type": {
+                            "type": "adverb"
+                        },
+                        "optional": true,
+                        "desc": "adverb"
+                    },
+                    {
+                        "type": {
+                            "type": "adjective"
+                        },
+                        "optional": true,
+                        "desc": "adjective"
+                    },
+                    {
+                        "type": {
+                            "type": [
+                                "noun",
+                                "pronoun"
+                            ]
+                        },
+                        "optional": false,
+                        "desc": "noun"
+                    }
+                ],
+                "delimiter": [
+                    {
+                        "type": "preposition"
+                    },
+                    {
+                        "type": [
+                            "noun",
+                            "pronoun"
+                        ]
+                    }
+                ],
+                "on_finished": null
+            }
+        },
+        {
+            "type": "genitive_object",
+            "optional": true,
+            "pattern": {
+                "sequence": [
+                    {
+                        "type": {
+                            "word": "of"
+                        },
+                        "optional": false,
+                        "desc": "genitive_marker"
+                    },
+                    {
+                        "type": {
+                            "type": [
+                                "article",
+                                "possessive",
+                                "demonstrative"
+                            ]
+                        },
+                        "optional": true,
+                        "desc": "article"
+                    },
+                    {
+                        "type": {
+                            "type": "degree_adverb"
+                        },
+                        "optional": true,
+                        "desc": "degree_adverb"
+                    },
+                    {
+                        "type": {
+                            "type": "adjective"
+                        },
+                        "optional": true,
+                        "desc": "adjective"
+                    },
+                    {
+                        "type": {
+                            "type": [
+                                "noun",
+                                "pronoun"
+                            ]
+                        },
+                        "optional": false,
+                        "desc": "noun"
+                    }
+                ],
+                "delimiter": [
+                    {
+                        "type": "preposition"
+                    },
+                    {
+                        "type": [
+                            "noun",
+                            "pronoun"
+                        ]
+                    }
+                ],
+                "on_finished": null
+            }
+        },
+        {
+            "type": "prepositional_object",
+            "optional": true,
+            "pattern": {
+                "sequence": [
+                    {
+                        "type": {
+                            "type": "preposition"
+                        },
+                        "optional": false,
+                        "desc": "adverb"
+                    },
+                    {
+                        "type": {
+                            "type": [
+                                "article",
+                                "possessive",
+                                "demonstrative"
+                            ]
+                        },
+                        "optional": true,
+                        "desc": "article"
+                    },
+                    {
+                        "type": {
+                            "type": "degree_adverb"
+                        },
+                        "optional": true,
+                        "desc": "degree_adverb"
+                    },
+                    {
+                        "type": {
+                            "type": "adjective"
+                        },
+                        "optional": true,
+                        "desc": "adjective"
+                    },
+                    {
+                        "type": {
+                            "type": [
+                                "noun",
+                                "pronoun"
+                            ]
+                        },
+                        "delimiter": [
+                            {
+                                "verb": [
+                                    true
+                                ]
+                            }
+                        ],
+                        "optional": false,
+                        "desc": "noun"
+                    }
+                ],
+                "delimiter": [
+                    {
+                        "type": [
+                            "noun",
+                            "pronoun"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
