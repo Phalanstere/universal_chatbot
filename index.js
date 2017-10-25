@@ -19,7 +19,7 @@ var IntentionManager = require('./lib/intentions/intention_manager.js');
 
 meta("Hier kommt der Universale Bot");
 
-var version = "0.0.27";
+var version = "0.0.28";
 
 console.log("UniversalBot - version: " + version)
 
@@ -56,9 +56,11 @@ var UniversalBot = function(params) {
 
 
     this.process_aiml = function(params, error) {
+        console.log("PROCESS_AIML");
+
 
         if (params) {
-            console.log("HIER KOMME DER CALLBACK");
+            debugs ("HIER KOMMT DER CALLBACK PROCESS AIML");
             console.log( params );
             var s = self.find_session( params.session_id);
             if (params.topic_change) self.change_topic( s );
@@ -69,7 +71,8 @@ var UniversalBot = function(params) {
         } else {
             meta("KEINE ANTWORT");
             meta ( error );
-            self.aiml_intervention(params);
+            
+            // self.aiml_intervention(params);
         }
 
         // console.log( params.answer.template );
@@ -121,7 +124,6 @@ var UniversalBot = function(params) {
            }
 
         
-
     }
 
 
@@ -140,6 +142,9 @@ var UniversalBot = function(params) {
     }
 
 
+
+
+    // THIS IS THE ENTRY FUNCTION
     this.input = function(text, session_id, type, callback) {
         debugs ("Hier kommt die Eingabe: " + text + " type " + type);
         if (! session_id)  session_id = self.create_session();
@@ -185,7 +190,8 @@ var UniversalBot = function(params) {
         else 
             {
             debugs ("Hier kommt reines AIML - ohne Intentionen ");
-            self.aiml.input (  input,  session, self.process_aiml);
+            // self.aiml.input (  input,  session, self.process_aiml);
+            self.aiml.input (  input,  session, callback );
             }
 
 
