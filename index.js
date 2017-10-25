@@ -19,7 +19,7 @@ var IntentionManager = require('./lib/intentions/intention_manager.js');
 
 meta("Hier kommt der Universale Bot");
 
-var version = "0.0.24";
+var version = "0.0.27";
 
 console.log("UniversalBot - version: " + version)
 
@@ -177,7 +177,7 @@ var UniversalBot = function(params) {
 
                         default:
                             debugs("noch nicht definiert");
-                        bteak;
+                        break;
                     }
 
                 }
