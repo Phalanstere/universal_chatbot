@@ -1,6 +1,6 @@
 {
   "name": "universal_bot",
-  "version": "0.0.31",
+  "version": "0.0.32",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,8 @@
     "aiml-high": "0.0.8",
     "debug": "^3.1.0",
     "stopword": "^0.1.8",
-    "wordnet": "^0.1.2"
+    "wordnet": "^0.1.2",
+    "xml-js": "^1.5.1"
   },
   "repository": {
     "type": "git",

@@ -87,6 +87,11 @@ var UniversalBot = function(params) {
     }
 
 
+    self.test = function(input) {
+        console.log("Das ist der Test des Bots " + input);
+    }
+
+
     self.find_session = function(id) {
         meta("ID : " + id);
 
